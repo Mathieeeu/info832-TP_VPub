@@ -8,14 +8,11 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>VPub</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
-    <sonar.host.url>http://localhost:9000</sonar.host.url>
-    <sonar.login>your-sonar-token</sonar.login>
   </properties>
 
   <dependencies>
@@ -72,5 +69,36 @@
     </plugins>
   </build>
 
+  <reporting>
+    <plugins>
+      <!-- Rapport des tests (Surefire) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.1.2</version>
+      </plugin>
+
+      <!-- Rapport de couverture de code (JaCoCo) -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.10</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+      <!-- Rapport SonarQube (facultatif, car Sonar génère ses propres rapports sur son serveur) -->
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.1.2184</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
