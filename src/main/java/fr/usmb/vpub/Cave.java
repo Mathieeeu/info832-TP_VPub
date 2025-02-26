@@ -1,6 +1,7 @@
 package fr.usmb.vpub;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cave {
     private ArrayList<Boisson> rayons;
@@ -51,11 +52,7 @@ public class Cave {
         return retour.toString();
     }
 
-    public ArrayList<Boisson> getRayons() {
+    public List<Boisson> getRayons() {
         return rayons;
-    }
-
-    public void setRayons(ArrayList<Boisson> rayons) {
-        this.rayons = rayons;
     }
 }

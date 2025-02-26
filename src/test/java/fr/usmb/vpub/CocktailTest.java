@@ -8,29 +8,29 @@ class CocktailTest {
     private Cocktail cocktail1;
 
     @BeforeEach
-    protected void setUp() {
+    void setUp() {
         cocktail1 = new Cocktail("Monaco");
     }
 
     @Test
-    public void testPasIngredient() {
+    void testPasIngredient() {
         Assertions.assertEquals(0, cocktail1.getIngredients().size());
     }
 
     @Test
-    public void testIngredient() {
+    void testIngredient() {
         cocktail1.add("Limonade", 2.5d);
         Assertions.assertEquals(1, cocktail1.getIngredients().size());
     }
 
     @Test
-    public void testBoissonAlcoolisee() {
+    void testBoissonAlcoolisee() {
         cocktail1.add("Limonade", 2.5d);
         Assertions.assertFalse(cocktail1.getAlcoolise());
     }
 
     @Test
-    public void testPlusieursIngredients() {
+    void testPlusieursIngredients() {
         cocktail1.add("Limonade", 2.5d);
         cocktail1.add("Biere", 100d);
         Assertions.assertEquals(2, cocktail1.getIngredients().size());
