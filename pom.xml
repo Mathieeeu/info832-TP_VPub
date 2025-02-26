@@ -9,6 +9,14 @@
 
   <name>VPub</name>
   <url>http://www.example.com</url>
+  <description>
+    VPub est une application de simulation de bar virtuel. Elle permet de gérer les stocks, les commandes et les clients.
+  </description>
+  <inceptionYear>2025</inceptionYear>
+  <organization>
+    <name>USMB</name>
+    <url>https://www.univ-smb.fr/</url>
+  </organization>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -66,6 +74,7 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
       </plugin>
+
     </plugins>
   </build>
 
@@ -92,21 +101,29 @@
         </reportSets>
       </plugin>
 
-      <!-- Rapport SonarQube (facultatif, car Sonar génère ses propres rapports sur son serveur) -->
+      <!-- Rapport SonarQube (facultatif, car Sonar génère ses propres rapports sur son serveur mais bon) -->
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
       </plugin>
+
+      <!-- Rapport Javadoc -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.11.2</version>
         <configuration>
-
         </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>javadoc</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
+
     </plugins>
   </reporting>
-
 </project>

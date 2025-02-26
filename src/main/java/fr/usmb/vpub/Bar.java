@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * <p>Bar class.</p>
+ *
+ * @author doche
+ */
 public class Bar {
     private ArrayList<Boisson> boissonChaude;
     private ArrayList<Boisson> boissonFroide;
@@ -13,7 +18,7 @@ public class Bar {
     private ArrayList<Cocktail> cocktailAvecAlcool;
 
     /**
-     *
+     * <p>Constructor for Bar.</p>
      */
     public Bar(){
         this.boissonChaude = new ArrayList<>();
@@ -25,6 +30,7 @@ public class Bar {
 
     /**
      * Ajoute une boisson au bar
+     *
      * @param boisson la boisson à ajouter
      */
     public void add(Boisson boisson){
@@ -36,7 +42,9 @@ public class Bar {
     }
 
     /**
-     * @param cocktail
+     * <p>add.</p>
+     *
+     * @param cocktail a {@link fr.usmb.vpub.Cocktail} object
      */
     public void add(Cocktail cocktail){
         if(Boolean.FALSE.equals(cocktail.getAlcoolise())){
@@ -47,8 +55,10 @@ public class Bar {
     }
 
     /**
-     * @param command
-     * @return
+     * <p>serv.</p>
+     *
+     * @param command a {@link java.lang.String} object
+     * @return a {@link java.lang.Object} object
      */
     public Object serv(String command){
 
@@ -93,6 +103,11 @@ public class Bar {
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
+    /**
+     * <p>toString.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String toString(){
         StringBuilder retour = new StringBuilder();
         String eol = System.lineSeparator();
@@ -127,18 +142,43 @@ public class Bar {
         return retour.toString();
     }
 
+    /**
+     * <p>Getter for the field <code>boissonChaude</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Boisson> getBoissonChaude() {
         return boissonChaude;
     }
+    /**
+     * <p>Getter for the field <code>boissonFroide</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Boisson> getBoissonFroide() {
         return boissonFroide;
     }
+    /**
+     * <p>Getter for the field <code>boissonAlcoolisee</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Boisson> getBoissonAlcoolisee() {
         return boissonAlcoolisee;
     }
+    /**
+     * <p>Getter for the field <code>cocktailSansAlcool</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Cocktail> getCocktailSansAlcool() {
         return cocktailSansAlcool;
     }
+    /**
+     * <p>Getter for the field <code>cocktailAvecAlcool</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Cocktail> getCocktailAvecAlcool() {
         return cocktailAvecAlcool;
     }

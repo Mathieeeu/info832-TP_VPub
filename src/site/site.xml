@@ -1,0 +1,10 @@
+<project>
+    <body>
+        <links>
+        </links>
+        <menu name="Usefull links">
+            <item name="Sonarqube" href="https://sonarcloud.io/summary/new_code?id=Mathieeeu_info832-TP_VPub"/>
+        </menu>
+        <menu ref="reports"/>
+    </body>
+</project>

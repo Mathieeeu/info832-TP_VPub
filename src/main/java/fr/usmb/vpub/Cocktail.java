@@ -3,6 +3,11 @@ package fr.usmb.vpub;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <p>Cocktail class.</p>
+ *
+ * @author doche
+ */
 public class Cocktail {
 
     private class Ingredient{
@@ -28,7 +33,8 @@ public class Cocktail {
 
     /**
      * Creates a Cocktail with its name
-     * @param nom 
+     *
+     * @param nom a {@link java.lang.String} object
      */
     public Cocktail(String nom){
         this.nom = nom;
@@ -38,8 +44,9 @@ public class Cocktail {
 
     /**
      * add a new element into the Cocktail.
-     * @param ingredient
-     * @param quantite
+     *
+     * @param ingredient a {@link java.lang.String} object
+     * @param quantite a {@link java.lang.Double} object
      */
     public void add(String ingredient, Double quantite){
         this.ingredients.add(new Ingredient(ingredient, quantite));
@@ -47,6 +54,11 @@ public class Cocktail {
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
+     */
+    /**
+     * <p>toString.</p>
+     *
+     * @return a {@link java.lang.String} object
      */
     public String toString(){
         StringBuilder retour = new StringBuilder(this.nom + " : ");
@@ -56,12 +68,27 @@ public class Cocktail {
         return retour.toString();
     }
 
+    /**
+     * <p>Getter for the field <code>nom</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getNom() {
         return nom;
     }
+    /**
+     * <p>Getter for the field <code>ingredients</code>.</p>
+     *
+     * @return a {@link java.util.List} object
+     */
     public List<Ingredient> getIngredients() {
         return ingredients;
     }
+    /**
+     * <p>Getter for the field <code>alcoolise</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object
+     */
     public Boolean getAlcoolise() {
         return alcoolise;
     }
